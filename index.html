@@ -18,10 +18,18 @@
           <div class="product-image">
             <!-- image goes here -->
             <img :src="image" />
-            <a :href='url' >  {{ urlTitle }}</a>
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
+            <p :class="style.many" v-if="inventory > 10">In Stock</p>
+            <p :class="style.some" v-else-if="inventory <= 10 && inventory > 0">Almost sold out</p>
+            <p :class="style.none" v-else>Out of Stock</p>
+            <p v-show="onSale">On Sale</p>
+           
+            <!-- <p v-if="inStock">In Stock</p>-->
+            <!--<p v-else>Out of Stock</p> -->
+            <!-- <p v-show="inStock">In Stock</p> -->
+            <!-- <p v-show>Out of Stock</p> -->
           </div>
         </div>
       </div>

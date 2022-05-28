@@ -4,7 +4,24 @@ body {
   font-family: tahoma;
   color: #282828;
 }
-
+.many{
+  display:inline-block;
+  border: solid 1px #009200 ;
+  padding: 0 10px;
+  color: #009200;
+}
+.some {
+  display:inline-block;
+  border: solid 1px #ffa500 ;
+  padding: 0 10px;
+  color: #ffa500;
+}
+.none {
+  display:inline-block;
+  border: solid 1px #ff0000 ;
+  padding: 0 10px;
+  color: #ff0000;
+}
 .button {
   margin: 30px;
   background-color: #39495c;
