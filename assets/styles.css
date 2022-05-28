@@ -181,6 +181,14 @@ textarea {
 ul {
   list-style-type: none;
 }
+.flex {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+.flex li {
+    padding: 0 5px;
+}
 
 @media only screen and (max-width: 600px) {
   .container {

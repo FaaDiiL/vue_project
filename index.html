@@ -25,7 +25,36 @@
             <p :class="style.some" v-else-if="inventory <= 10 && inventory > 0">Almost sold out</p>
             <p :class="style.none" v-else>Out of Stock</p>
             <p v-show="onSale">On Sale</p>
-           
+            <div class="flex">
+              Details:
+              <ul class="flex">
+                <li v-for="detail in details">
+                  {{ detail }}
+                </li>
+              </ul>
+            </div>
+            <br/>
+            <div class="flex">
+              Colors:
+              <ul class="flex" >
+                <li class="flex" v-for="variant in variants" :key="variant.id">
+                  <button>
+                    {{ 
+                      (variant.color && variant.color[0].toUpperCase() + variant.color.slice(1)) || ""
+                    }}
+                  </button>
+              </li>
+            </ul>
+            </div>
+            <br/>
+            <div class="flex">
+              Sizes:
+              <ul class="flex">
+                <li v-for="size in sizes">
+                  <button>{{ size }}</button>
+                </li>
+              </ul>
+            </div>
             <!-- <p v-if="inStock">In Stock</p>-->
             <!--<p v-else>Out of Stock</p> -->
             <!-- <p v-show="inStock">In Stock</p> -->
