@@ -1,8 +1,10 @@
 const app = Vue.createApp({
      data() {
-          return {
-               product: 'Boots',
-               description: 'Thes boots will make you stand tall',
-          }
+         return {
+             product: 'Socks',
+             image: './assets/images/socks_green.jpg',
+             urlTitle: 'Youtube',
+             url: 'http://www.youtube.com'
+         }
      }
-})
+ })
